@@ -1,0 +1,44 @@
+
+\section{Introduction}
+
+An ideal aim of numerical galaxy evolution studies is to model a representative population of galaxies, including all of the relevant physics down to small scales, in order to provide a test bed for the study and interpretation of observed galaxies.
+In order to achieve this we would ideally wish to simulate large volumes, in order to sample a representative volume of the universe, at the very highest resolution, in order to resolve the internal physical processes within individual galaxies, and with all of the key physics included, such as full hydrodynamics.
+Unfortunately this is not computationally feasible; compromises must be made with volume, resolution or choice of physics, depending on the scientific questions posed.
+
+Hydrodynamic cosmological simulations are now capable of simulating large regions of the universe, tens of Mpc across, down to redshift zero, producing thousands of galaxies across a wide range of stellar masses.
+Projects such as \textsc{Eagle}, Illustris and MUFASA have mass resolutions of approximately $\sim 10^6 M_{\odot}$, sufficiently high resolution to resolve the internal structure of galaxies \citep{schaye_eagle_2014,vogelsberger_introducing_2014,dave_mufasa:_2016-1}.
+However, despite these large volumes, the peaks of the overdensity distribution are still poorly sampled due to the lack of large scale modes in constrained periodic volumes.
+Much larger volumes are required to sample the rare overdensities on large scales that are likely to evolve in to the most massive clusters by the present day.
+For example, the \textsc{Eagle} simulation contains just 7 clusters \todo{insert mass limit} at $z=0$ within the fiducial 100 Mpc volume \citep{schaye_eagle_2014}.
+
+% The Evolution and Assembly of GaLaxies and their Environments (EAGLE) project is a hydrodynamic simulation of galaxy evolution that reproduces many properties of the observed galaxy population at low and intermediate redshifts (\cite{schaye_eagle_2014}, \cite{crain_eagle_2015}).
+
+One means of overcoming the limitations of relatively small periodic volumes is to use much larger dark matter-only simulations, with box lengths of order $\sim$ Gpc, as sources for `zoom' simulations.
+These use regions selected from the dark matter only simulation as source initial conditions, and resimulate them at higher resolution with extra physics, such as full hydrodynamics \citep{katz_hierarchical_1993, tormen_structure_1997}.
+This technique preserves the large scale power by simulating the dark matter at low resolution outside the high resolution region.
+Due to the size of the parent dark matter volume, we are able to sample rare overdense regions.
+
+A recent example is the \text{C-Eagle} simulations, high resolution, full-hydrodynamic simulations of 30 clusters with a range of descendant masses.
+These were selected from a parent dark matter simulation with volume (3.2 Gpc)$^3$ using the \cite{planck_collaboration_planck_2014} cosmology, containing ???? clusters, and ??? high mass ($M \,/\, M_{\odot} > 10^{15}$) clusters \citep{barnes_redshift_2017}.
+This project allowed the application of the \textsc{Eagle} model to cluster environments without having to simulate a large periodic box.
+
+
+The zoom technique can also be used to sample a range of overdensities, not just the outliers of the overdensity distribution.
+The \textsc{GIMIC} simulations \citep{crain_galaxies-intergalactic_2009} are one example of this approach; they picked 5 different regions of radius 20 Mpc/h at z = 1.5 from the Millennium simulation, with overdensities (-2,-1,0,1,2)$\sigma$ (\textit{rms} mass fluctuation on re-sim scale) from the cosmic mean at z = 1.5, and resimulated them at high resolution with full hydrodynamics.
+This not only allowed the investigation of the environmental effect of galaxy evolution, but also, by appropriately weighting each region according to its overdensity, the regions could be combined to produce composite distribution functions.
+In principal, provided a sufficient number of resimulations of reasonable volume, this approach could be used to extend the dynamic range of high resolution simulations by sampling the overdense regions, and appropriately weighting them with respect to average overdensity resimulations.
+
+A number of simulations have been performed at high-redshift.
+\todo{cite bluetides}
+\cite{furlong_evolution_2015} investigate the high redshift properties of galaxies in \textsc{Eagle}, and find reasonably good agreement with observationally inferred distribution functions of stellar mass and star formation rate at high redshift.
+Since the model was tuned to $z=0$ galaxy properties, the high redshift properties represent predictions of the model.
+
+Unfortunately, there are very few galaxies in the fiducial \textsc{Eagle} volume during the Epoch of Reionisation (EoR; $z > 5$).
+This is particularly the case for the most massive objects, which have been shown to predominantly reside in protocluster environments, the progenitors of todays collapsed clusters \citep{lovell_characterising_2018,chiang_galaxy_2017}.
+This is of particular importance for upcoming space based observatories such as WFIRST and Euclid, which will produce wide, shallow surveys of the EoR.
+These surveys will predominantly probe the bright end of the UV Luminosity Function (UVLF), which is currently poorly constrained with state of the art hydrodynamic simulations.
+
+In this paper we use the same parent volume as the \textsc{C-Eagle} simulation to select overdensities at high redshift ($z \sim 4.7$), which we combine to produce distribution functions of key intrinsic properties.
+This allows us to extend the dynamic range of the \textsc{Eagle} simulation, create much larger samples of high redshift galaxies, and test the environmental dependence of galaxy assembly and evolution at high redshift.
+
+\todo{visualisation of sim}
